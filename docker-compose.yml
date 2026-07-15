@@ -1,0 +1,13 @@
+services:
+  voice-bridge:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - MOCK_MODE=true
+      - OLLAMA_URL=http://host.docker.internal:11434
+      - LLM_MODEL=llama3.2
+      - TARGET_LATENCY_S=1.5
+    restart: unless-stopped

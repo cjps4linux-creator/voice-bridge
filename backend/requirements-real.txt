@@ -1,0 +1,5 @@
+# Real-mode extras (optional). Base image runs MOCK_MODE=true with no heavy deps.
+# Install to enable on-device voice:
+#   pip install -r requirements-real.txt
+faster-whisper>=1.0.0
+piper-tts>=1.2.0

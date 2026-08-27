@@ -5,8 +5,8 @@ import re
 
 # Deterministic deny list (extend as needed). Refusal text is fixed, not model-chosen.
 DENY_PATTERNS = [
-    (re.compile(r"\b(secret|password|api[_-]?key|token)\b", re.I), "I can't share credentials."),
-    (re.compile(r"ignore (all|previous) instructions", re.I), "I follow my configured rules."),
+    (re.compile(r"\b(secret|password|api[_-]?key|token)\b", re.IGNORECASE), "I can't share credentials."),
+    (re.compile(r"ignore (all|previous) instructions", re.IGNORECASE), "I follow my configured rules."),
 ]
 
 

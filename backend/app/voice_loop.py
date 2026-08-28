@@ -28,7 +28,7 @@ async def handle_voice(ws: WebSocket):
             if msg["type"] == "websocket.disconnect":
                 break
             if msg["type"] == "websocket.receive":
-                if "bytes" in msg and msg["bytes"]:
+                if msg.get("bytes"):
                     # real mode: audio frame -> STT. demo: ignore raw bytes.
                     continue
                 data = msg.get("text")
@@ -36,7 +36,7 @@ async def handle_voice(ws: WebSocket):
                     continue
                 try:
                     evt = __import__("json").loads(data)
-                except (json.JSONDecodeError, Exception):
+                except Exception:
                     continue
                 await _dispatch(ws, evt)
     except WebSocketDisconnect:

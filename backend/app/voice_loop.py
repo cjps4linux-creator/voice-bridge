@@ -36,7 +36,7 @@ async def handle_voice(ws: WebSocket):
                     continue
                 try:
                     evt = __import__("json").loads(data)
-                except Exception:
+                except (json.JSONDecodeError, Exception):
                     continue
                 await _dispatch(ws, evt)
     except WebSocketDisconnect:
@@ -65,7 +65,7 @@ async def _dispatch(ws: WebSocket, evt: dict):
         allowed, out = guardrails.apply_guardrails(text, out)
         orch.session.on_llm_done()
         # SPEAK
-        audio, tts_lat = vendors.synthesize(out)
+        _audio, tts_lat = vendors.synthesize(out)
         end_to_end = stt_lat + llm_lat + tts_lat
         metrics.record(end_to_end, tokens, cost)
         await ws.send_json({

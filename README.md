@@ -1,6 +1,6 @@
 # voice-bridge
 
-Lightweight real-time voice agent orchestration in Docker — demonstrates the orchestration layer around voice AI, including state-machine driven turn management, barge-in, persistent memory, vendor abstraction, and latency/cost instrumentation.
+Lightweight real-time voice agent orchestration in Docker  -  demonstrates the orchestration layer around voice AI, including state-machine driven turn management, barge-in, persistent memory, vendor abstraction, and latency/cost instrumentation.
 
 Built by Conrad CJ Wilson.
 
@@ -13,7 +13,7 @@ Built by Conrad CJ Wilson.
 | Persistent memory | Session and project memory layers injected each turn |
 | Vendor abstraction | Swappable STT / LLM / TTS backends with graceful degradation |
 | Latency instrumentation | Per-turn end-to-end timing, token counts, cost estimates, and sub-1.5s target assertions |
-| Mock mode | Deterministic orchestration with no models, GPU, or cloud — runs anywhere |
+| Mock mode | Deterministic orchestration with no models, GPU, or cloud  -  runs anywhere |
 | WebSocket protocol | Full-duplex JSON control frames for real-time interaction |
 | Production scaffolding | Docker, docker-compose, health checks, `/metrics` endpoint |
 
@@ -171,7 +171,7 @@ Production-ready orchestration prototype. State machine, barge-in, memory layers
 
 ## License
 
-MIT — use, modify, and ship freely.
+MIT  -  use, modify, and ship freely.
 
 **Author:** Conrad CJ Wilson
 **GitHub:** https://github.com/cjps4linux-creator

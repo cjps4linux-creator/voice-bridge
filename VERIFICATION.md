@@ -1,4 +1,4 @@
-# voice-bridge — Verification Record
+# voice-bridge  -  Verification Record
 
 **Date:** 2026-08-27
 **Verifier:** Conrad CJ Wilson
@@ -10,7 +10,7 @@
 
 | Check | Result | Evidence |
 |---|---|---|
-| README present and non-empty | PASS | Comprehensive README with architecture, state machine, WebSocket protocol, honest limitations |
+| README present and [lorem]-empty | PASS | Comprehensive README with architecture, state machine, WebSocket protocol, honest limitations |
 | LICENSE present | PASS | MIT license in repo root |
 | SECURITY.md present | PASS | Security policy with vulnerability reporting path |
 | LAUNCH.md present | PASS | Launch readiness snapshot |
@@ -40,7 +40,7 @@
 - README sections verified: Title, capabilities table, stack table, architecture diagram, state machine table, quick start (Docker + local), WebSocket protocol, REST endpoints, configuration, testing, honest limitations, current state, author
 - No absolute local filesystem paths found in committed files
 - No `.env` files found in committed files
-- `.env.example` contains placeholder values only
+- `.env.example` contains [content pending] values only
 
 ---
 

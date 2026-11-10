@@ -1,4 +1,4 @@
-"""Deterministic guardrails around the LLM — the 'harness, not prompt engineering'.
+"""Deterministic guardrails around the LLM  -  the 'harness, not prompt engineering'.
 Safety rules applied server-side regardless of model output.
 """
 import re

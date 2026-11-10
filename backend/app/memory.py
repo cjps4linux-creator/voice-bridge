@@ -1,5 +1,5 @@
 """Persistent memory: session/project layers injected into each interaction.
-Mirrors the 'relationship that compounds' requirement — summaries persist across turns.
+Mirrors the 'relationship that compounds' requirement  -  summaries persist across turns.
 """
 from collections import deque
 from app.config import MAX_TURNS_MEMORY
